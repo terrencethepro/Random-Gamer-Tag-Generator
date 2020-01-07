@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap');
+
+html {
+    background: url("https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80") no-repeat center center fixed;
+    background-size: cover;
+}
+
+h1 {
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 46px;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+h2 {
+    font-family: 'Baloo Bhai', cursive;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.inputs {
+    text-align: center;
+}
+
+.fName[type=text] {
+    padding-left: 10px;
+    border: 2px solid #003087;
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 15px;
+}
+
+.lName[type=text] {
+    padding-left: 10px;
+    border: 2px solid #003087;
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 15px;
+}
+
+.submitBtn {
+    border: 2px solid #003087;
+    background-color: white;
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 15px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.submitBtn:hover {
+    color: #ffffff;
+    background: #003087;
+    border-color: #003087;
+    transition: all 0.4s ease 0s;
+}
+
+#gender {
+    border: 2px solid #003087;
+    background-color: white;
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 15px;
+    padding-left: 4px;
+}
+
+p {
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 30px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.inputs {
+    position: relative;
+    min-height: 70vh;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 20px;
+}
