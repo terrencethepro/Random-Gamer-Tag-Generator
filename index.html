@@ -1,0 +1,149 @@
+<!DOCTYPE html> <html><head>
+        <title>Random Gamer Tag Generator</title>
+    <style>@import url('https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap');
+
+html {
+    background: url("https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80") no-repeat center center fixed;
+    background-size: cover;
+}
+
+h1 {
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 46px;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+h2 {
+    font-family: 'Baloo Bhai', cursive;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.inputs {
+    text-align: center;
+}
+
+.fName[type=text] {
+    padding-left: 10px;
+    border: 2px solid #003087;
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 15px;
+}
+
+.lName[type=text] {
+    padding-left: 10px;
+    border: 2px solid #003087;
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 15px;
+}
+
+.submitBtn {
+    border: 2px solid #003087;
+    background-color: white;
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 15px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.submitBtn:hover {
+    color: #ffffff;
+    background: #003087;
+    border-color: #003087;
+    transition: all 0.4s ease 0s;
+}
+
+#gender {
+    border: 2px solid #003087;
+    background-color: white;
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 15px;
+    padding-left: 4px;
+}
+
+p {
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 30px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.inputs {
+    position: relative;
+    min-height: 70vh;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 20px;
+}</style></head>
+    <body>
+        <h1>Random Gamertag Generator</h1>
+
+        <h2>Enter Your Name!</h2>
+
+        <div class="inputs">
+            <input class="fName" type="text" placeholder="First name">
+            <input class="lName" type="text" placeholder="Last name">
+            <select id="gender">
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+            <button class="submitBtn">Generate</button>
+            <p></p>
+        </div>
+        <footer>Copyright - Terrence Bremner 2019 ©</footer>
+    
+<script>
+/*__POPCODESTART__*/
+var maleNames = ["the_Big_poppa84", "The_god69", "The_pro445", "is_the_Best21", "69696969", "42069", "Gets_Kills95", "Is_Goated", "120390", "The_Master", "the_flash97", "Plays_Games", "is_Daddy"];
+var femaleNames = ["UwU", "The_Kawaii_Girl", "The_Huntress45", "Kunoichi89", "Is_Fabulous28", "The_Man_Slayer92", "Likes_Unicorns67", "Eats_Big_Macs", "The_Hot_Dog", "Joe_Mama", "The_Sprinkler", "YT", "The_Baddie", "The_Baby"];
+document.querySelector(".submitBtn").addEventListener('click', function () {
+  var fName = document.querySelector(".fName").value;
+  var lName = document.querySelector(".lName").value;
+  var gender = document.querySelector("#gender").value;
+  var randomM = Math.floor(Math.random() * maleNames.length);
+  var randomF = Math.floor(Math.random() * femaleNames.length);
+
+  if (fName === "Terrence" && lName === "Bremner") {
+    alert("FBI open up!");
+  } else {
+    switch (fName) {
+      case "":
+        alert("Please complete all fields below");
+        break;
+
+      default:
+        switch (lName) {
+          case "":
+            alert("Please complete all fields below.");
+            break;
+
+          default:
+            switch (gender) {
+              case "Male":
+                document.querySelector("p").innerHTML = fName + "_" + lName + "_" + maleNames[randomM].toLowerCase();
+                break;
+              //toLowerCase instead of toUpperCase
+
+              case "Female":
+                document.querySelector("p").innerHTML = fName + "_" + lName + "_" + femaleNames[randomF].toLowerCase();
+                break;
+
+              default:
+                alert("Please complete all fields below.");
+                break;
+            }
+
+        }
+
+    }
+  }
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbIm1hbGVOYW1lcyIsImZlbWFsZU5hbWVzIiwiZG9jdW1lbnQiLCJxdWVyeVNlbGVjdG9yIiwiYWRkRXZlbnRMaXN0ZW5lciIsImZOYW1lIiwidmFsdWUiLCJsTmFtZSIsImdlbmRlciIsInJhbmRvbU0iLCJNYXRoIiwiZmxvb3IiLCJyYW5kb20iLCJsZW5ndGgiLCJyYW5kb21GIiwiYWxlcnQiLCJpbm5lckhUTUwiLCJ0b0xvd2VyQ2FzZSJdLCJtYXBwaW5ncyI6IkFBQUEsSUFBSUEsU0FBUyxHQUFHLENBQUMsaUJBQUQsRUFBb0IsV0FBcEIsRUFBaUMsWUFBakMsRUFBK0MsZUFBL0MsRUFBZ0UsVUFBaEUsRUFBNEUsT0FBNUUsRUFBcUYsY0FBckYsRUFBcUcsV0FBckcsRUFBa0gsUUFBbEgsRUFBNEgsWUFBNUgsRUFBMEksYUFBMUksRUFBeUosYUFBekosRUFBd0ssVUFBeEssQ0FBaEI7QUFFQSxJQUFJQyxXQUFXLEdBQUcsQ0FBQyxLQUFELEVBQVEsaUJBQVIsRUFBMkIsZ0JBQTNCLEVBQTZDLFlBQTdDLEVBQTJELGVBQTNELEVBQTRFLGtCQUE1RSxFQUFnRyxrQkFBaEcsRUFBb0gsZUFBcEgsRUFBcUksYUFBckksRUFBb0osVUFBcEosRUFBZ0ssZUFBaEssRUFBaUwsSUFBakwsRUFBdUwsWUFBdkwsRUFBcU0sVUFBck0sQ0FBbEI7QUFFQUMsUUFBUSxDQUFDQyxhQUFULENBQXVCLFlBQXZCLEVBQXFDQyxnQkFBckMsQ0FBc0QsT0FBdEQsRUFBK0QsWUFBVztBQUN0RSxNQUFJQyxLQUFLLEdBQUdILFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixRQUF2QixFQUFpQ0csS0FBN0M7QUFDQSxNQUFJQyxLQUFLLEdBQUdMLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixRQUF2QixFQUFpQ0csS0FBN0M7QUFDQSxNQUFJRSxNQUFNLEdBQUdOLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixTQUF2QixFQUFrQ0csS0FBL0M7QUFDQSxNQUFJRyxPQUFPLEdBQUdDLElBQUksQ0FBQ0MsS0FBTCxDQUFXRCxJQUFJLENBQUNFLE1BQUwsS0FBaUJaLFNBQVMsQ0FBQ2EsTUFBdEMsQ0FBZDtBQUNBLE1BQUlDLE9BQU8sR0FBR0osSUFBSSxDQUFDQyxLQUFMLENBQVdELElBQUksQ0FBQ0UsTUFBTCxLQUFpQlgsV0FBVyxDQUFDWSxNQUF4QyxDQUFkOztBQUVBLE1BQUlSLEtBQUssS0FBSyxVQUFWLElBQXdCRSxLQUFLLEtBQUssU0FBdEMsRUFBaUQ7QUFDN0NRLElBQUFBLEtBQUssQ0FBQyxjQUFELENBQUw7QUFDSCxHQUZELE1BRU87QUFDSCxZQUFRVixLQUFSO0FBQ0ksV0FBSyxFQUFMO0FBQ0lVLFFBQUFBLEtBQUssQ0FBQyxrQ0FBRCxDQUFMO0FBQ0E7O0FBRUo7QUFDSSxnQkFBUVIsS0FBUjtBQUNJLGVBQUssRUFBTDtBQUNJUSxZQUFBQSxLQUFLLENBQUMsbUNBQUQsQ0FBTDtBQUNBOztBQUdKO0FBQ0ksb0JBQVFQLE1BQVI7QUFFSSxtQkFBSyxNQUFMO0FBQ0lOLGdCQUFBQSxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsR0FBdkIsRUFBNEJhLFNBQTVCLEdBQXlDWCxLQUFLLEdBQUcsR0FBUixHQUFjRSxLQUFkLEdBQXNCLEdBQXRCLEdBQTRCUCxTQUFTLENBQUNTLE9BQUQsQ0FBVCxDQUFtQlEsV0FBbkIsRUFBckU7QUFDQTtBQUNBOztBQUNKLG1CQUFLLFFBQUw7QUFDSWYsZ0JBQUFBLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixHQUF2QixFQUE0QmEsU0FBNUIsR0FBeUNYLEtBQUssR0FBRyxHQUFSLEdBQWNFLEtBQWQsR0FBc0IsR0FBdEIsR0FBNEJOLFdBQVcsQ0FBQ2EsT0FBRCxDQUFYLENBQXFCRyxXQUFyQixFQUFyRTtBQUNBOztBQUNKO0FBQ0lGLGdCQUFBQSxLQUFLLENBQUMsbUNBQUQsQ0FBTDtBQUNBO0FBWFI7O0FBUFI7O0FBTlI7QUE4Qkg7QUFDSixDQXpDRCIsInNvdXJjZXNDb250ZW50IjpbInZhciBtYWxlTmFtZXMgPSBbXCJ0aGVfQmlnX3BvcHBhODRcIiwgXCJUaGVfZ29kNjlcIiwgXCJUaGVfcHJvNDQ1XCIsIFwiaXNfdGhlX0Jlc3QyMVwiLCBcIjY5Njk2OTY5XCIsIFwiNDIwNjlcIiwgXCJHZXRzX0tpbGxzOTVcIiwgXCJJc19Hb2F0ZWRcIiwgXCIxMjAzOTBcIiwgXCJUaGVfTWFzdGVyXCIsIFwidGhlX2ZsYXNoOTdcIiwgXCJQbGF5c19HYW1lc1wiLCBcImlzX0RhZGR5XCJdO1xuXG52YXIgZmVtYWxlTmFtZXMgPSBbXCJVd1VcIiwgXCJUaGVfS2F3YWlpX0dpcmxcIiwgXCJUaGVfSHVudHJlc3M0NVwiLCBcIkt1bm9pY2hpODlcIiwgXCJJc19GYWJ1bG91czI4XCIsIFwiVGhlX01hbl9TbGF5ZXI5MlwiLCBcIkxpa2VzX1VuaWNvcm5zNjdcIiwgXCJFYXRzX0JpZ19NYWNzXCIsIFwiVGhlX0hvdF9Eb2dcIiwgXCJKb2VfTWFtYVwiLCBcIlRoZV9TcHJpbmtsZXJcIiwgXCJZVFwiLCBcIlRoZV9CYWRkaWVcIiwgXCJUaGVfQmFieVwiXTtcblxuZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5zdWJtaXRCdG5cIikuYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCBmdW5jdGlvbigpIHtcbiAgICB2YXIgZk5hbWUgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLmZOYW1lXCIpLnZhbHVlO1xuICAgIHZhciBsTmFtZSA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIubE5hbWVcIikudmFsdWU7XG4gICAgdmFyIGdlbmRlciA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIjZ2VuZGVyXCIpLnZhbHVlO1xuICAgIHZhciByYW5kb21NID0gTWF0aC5mbG9vcihNYXRoLnJhbmRvbSgpICogKG1hbGVOYW1lcy5sZW5ndGgpKTtcbiAgICB2YXIgcmFuZG9tRiA9IE1hdGguZmxvb3IoTWF0aC5yYW5kb20oKSAqIChmZW1hbGVOYW1lcy5sZW5ndGgpKTtcblxuICAgIGlmIChmTmFtZSA9PT0gXCJUZXJyZW5jZVwiICYmIGxOYW1lID09PSBcIkJyZW1uZXJcIikge1xuICAgICAgICBhbGVydChcIkZCSSBvcGVuIHVwIVwiKTtcbiAgICB9IGVsc2Uge1xuICAgICAgICBzd2l0Y2ggKGZOYW1lKSB7XG4gICAgICAgICAgICBjYXNlIFwiXCI6XG4gICAgICAgICAgICAgICAgYWxlcnQoXCJQbGVhc2UgY29tcGxldGUgYWxsIGZpZWxkcyBiZWxvd1wiKTtcbiAgICAgICAgICAgICAgICBicmVhaztcblxuICAgICAgICAgICAgZGVmYXVsdDpcbiAgICAgICAgICAgICAgICBzd2l0Y2ggKGxOYW1lKSB7XG4gICAgICAgICAgICAgICAgICAgIGNhc2UgXCJcIjpcbiAgICAgICAgICAgICAgICAgICAgICAgIGFsZXJ0KFwiUGxlYXNlIGNvbXBsZXRlIGFsbCBmaWVsZHMgYmVsb3cuXCIpO1xuICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7XG5cblxuICAgICAgICAgICAgICAgICAgICBkZWZhdWx0OlxuICAgICAgICAgICAgICAgICAgICAgICAgc3dpdGNoIChnZW5kZXIpIHtcblxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNhc2UgXCJNYWxlXCI6XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCJwXCIpLmlubmVySFRNTCA9IChmTmFtZSArIFwiX1wiICsgbE5hbWUgKyBcIl9cIiArIG1hbGVOYW1lc1tyYW5kb21NXS50b0xvd2VyQ2FzZSgpKTtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIC8vdG9Mb3dlckNhc2UgaW5zdGVhZCBvZiB0b1VwcGVyQ2FzZVxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNhc2UgXCJGZW1hbGVcIjpcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcInBcIikuaW5uZXJIVE1MID0gKGZOYW1lICsgXCJfXCIgKyBsTmFtZSArIFwiX1wiICsgZmVtYWxlTmFtZXNbcmFuZG9tRl0udG9Mb3dlckNhc2UoKSk7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrO1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRlZmF1bHQ6XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGFsZXJ0KFwiUGxlYXNlIGNvbXBsZXRlIGFsbCBmaWVsZHMgYmVsb3cuXCIpO1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhaztcbiAgICAgICAgICAgICAgICAgICAgICAgIH1cblxuXG4gICAgICAgICAgICAgICAgfVxuICAgICAgICB9XG4gICAgfVxufSk7Il19</script></body></html>
